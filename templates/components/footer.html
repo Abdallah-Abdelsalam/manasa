@@ -1,0 +1,217 @@
+{% load static %}
+{% load i18n %}
+
+<!-- FOOTER
+    ================================================== -->
+    <footer class="pt-8 pt-md-9 position-relative bg-darken dark-70 bg-gigas">
+        <!-- Shape -->
+        <div class="d-none d-wd-flexable shape shape-blur shape-left shape-flip-one-side shape-fluid-y svg-shim text-white">
+            <svg viewBox="0 0 310 800" fill="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px">
+            	<path fill="currentColor" d="M193,0H0v800h310c-64.6,0-117-52.4-117-117V0z"/>
+            </svg>
+
+        </div>
+        {% if LANGUAGE_CODE == 'ar'%}
+        <div class="container">
+            <div class="row" id="accordionFooter">
+                <div class="col-12 col-md-4 col-lg-8">
+                    <!-- Brand (place logo)-->
+                    {% if LANGUAGE_CODE == 'ar'%}
+                    <img src="{% static '/assets/img/mem1.png' %}" alt="..." class="footer-brand img-fluid mb-4 h-60p"> 
+                    <br>
+                    {% else %}
+                    <img src="{% static '/assets/img/mem.png' %}" alt="..." class="footer-brand img-fluid mb-4 h-60p"> 
+                    <br>
+                    {% endif %}
+                    <br> 
+                    <!-- Text -->
+                    <div class="media-body flex-shrink-1 ">
+                        <h5 class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center">رقم الهاتف</h5>
+                        <a href="https://wa.me/+971582733600" class="text-gray-800 d-block">+971582733600</a><a href="https://wa.me/+971582733600" class="text-gray-800 d-block text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover fa fa-whatsapp"></a>
+                    </div>
+
+                    <div class="mb-4">
+                        <a href="mailto:memacademy01@gmail.com" class="text-gray-800 font-size-sm-alone">memacademy01@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2">
+                    <div class="mb-5 mb-xl-0 footer-accordion">
+
+                        <!-- Heading -->
+                        <div id="widgetOne">
+                            <h5 class="mb-5">
+                                <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseOne" aria-expanded="true" aria-controls="widgetcollapseOne">
+                                    الحجز
+                                    <span class="ms-auto text-dark">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
+                                            <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
+                                        </svg>
+
+                                    </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="widgetcollapseOne" class="collapse show" aria-labelledby="widgetOne" data-parent="#accordionFooter">
+                            <!-- List -->
+                            <ul class="list-unstyled text-gray-800 font-size-sm-alone mb-6 mb-md-8 mb-lg-0">
+                                <li class="mb-3">
+                                    <a href="{% url 'about_us' %}" class="text-reset">
+                                        كيفيه الحجز
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2">
+                    <div class="mb-5 mb-xl-0 ms-xl-6 footer-accordion">
+
+                        <!-- Heading -->
+                        <div id="widgetTwo">
+                            <h5 class="mb-5">
+                                <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseTwo" aria-expanded="false" aria-controls="widgetcollapseTwo">
+                                    الدورات
+                                    <span class="ms-auto text-dark">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
+                                            <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
+                                        </svg>
+
+                                    </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="widgetcollapseTwo" class="collapse" aria-labelledby="widgetTwo" data-parent="#accordionFooter">
+                            <!-- List -->
+                            <ul class="list-unstyled text-gray-800 font-size-sm-alone mb-6 mb-md-8 mb-lg-0">
+                                {% for topic in category %}
+                                <li class="mb-3">
+                                    <a href="{% url 'register' %}" class="text-reset">
+                                        {{topic.name}}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="py-3 text-center">
+                <p class="text-gray-800 font-size-sm-alone mb-0 px-9 px-md-0">Copyright © 2024 CreativeLayers. All Right Reserved.</p>
+            </div>
+        </div> <!-- / .container -->
+        {% else %}
+        <div class="container">
+            <div class="row" id="accordionFooter">
+                <div class="col-12 col-md-4 col-lg-8">
+                    <!-- Brand (place logo)-->
+                    <img src="{% static '/assets/img/mem.png' %}" alt="..." class="footer-brand img-fluid mb-4 h-60p"> 
+                    <br>
+                    <br> 
+
+                    <!-- Text -->
+                    <div class="media-body flex-shrink-1 ">
+                        <h5 class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center">phone number</h5>
+                        <a href="https://wa.me/+971582733600" class="text-gray-800 d-block">+971582733600</a><a href="https://wa.me/+971582733600" class="text-gray-800 d-block text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover fa fa-whatsapp"></a>
+                    </div>
+
+                    <div class="mb-4">
+                        <a href="mailto:memacademy01@gmail.com" class="text-gray-800 font-size-sm-alone">memacademy01@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2">
+                    <div class="mb-5 mb-xl-0 footer-accordion">
+
+                        <!-- Heading -->
+                        <div id="widgetOne">
+                            <h5 class="mb-5">
+                                <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseOne" aria-expanded="true" aria-controls="widgetcollapseOne">
+                                    Our Company
+                                    <span class="ms-auto text-dark">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
+                                            <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
+                                        </svg>
+
+                                    </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="widgetcollapseOne" class="collapse show" aria-labelledby="widgetOne" data-parent="#accordionFooter">
+                            <!-- List -->
+                            <ul class="list-unstyled text-gray-800 font-size-sm-alone mb-6 mb-md-8 mb-lg-0">
+                                <li class="mb-3">
+                                    <a href="about-v2.html" class="text-reset">
+                                        About Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2">
+                    <div class="mb-5 mb-xl-0 ms-xl-6 footer-accordion">
+
+                        <!-- Heading -->
+                        <div id="widgetTwo">
+                            <h5 class="mb-5">
+                                <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseTwo" aria-expanded="false" aria-controls="widgetcollapseTwo">
+                                    Topics
+                                    <span class="ms-auto text-dark">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
+                                            <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
+                                        </svg>
+
+                                    </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="widgetcollapseTwo" class="collapse" aria-labelledby="widgetTwo" data-parent="#accordionFooter">
+                            <!-- List -->
+                            <ul class="list-unstyled text-gray-800 font-size-sm-alone mb-6 mb-md-8 mb-lg-0">
+                                {% for topic in category %}
+                                <li class="mb-3">
+                                    <a href="{% url 'register' %}" class="text-reset">
+                                        {{topic.name}}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="py-3 text-center">
+                <p class="text-gray-800 font-size-sm-alone mb-0 px-9 px-md-0">Copyright © 2024 CreativeLayers. All Right Reserved.</p>
+            </div>
+        </div> 
+        {% endif %}
+    </footer>

@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+
+{% if LANGUAGE_CODE == 'ar'%}
+<!-- PAGE TITLE
+    ================================================== -->
+    <header class="py-8 py-md-11" style="background-image: none;">
+        <div class="container text-center py-xl-2">
+            <h1 class="display-4 fw-semi-bold mb-0">احجز دورتك الآن</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-scroll justify-content-center">
+                    <li class="breadcrumb-item">
+                        <a class="text-gray-800" href="#">
+                            الرئيسية
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item text-gray-800 active" aria-current="page">
+                        الحجز
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <!-- Img -->
+        <img class="d-none img-fluid" src="...html" alt="...">
+    </header>
+
+
+    <!-- REGISTER
+    ================================================== -->
+    <div class="container mb-11">
+        <div class="row gx-0">
+            <div class="col-md-7 col-xl-4 mx-auto">
+                <!-- Register -->
+                <h3 class="mb-6">!احجز وابدأ الاستفادة من الدورات</h3>
+                {% include 'components/msg.html'%}
+                <!-- Form Register -->
+                <form class="mb-5" method="post" action="{% url 'register' %}">
+                    {% csrf_token %}
+
+                    <!-- Username -->
+                    <div class="form-group mb-5">
+                        <label for="modalSignupUsername1">
+                            الاسم الكامل 
+                        </label>
+                        <input type="text" class="form-control" id="modalSignupUsername1" placeholder="mohamed ahmed" name="username">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group mb-5">
+                        <label for="modalSignupEmail1">
+                            البريد الإلكتروني
+                        </label>
+                        <input type="email" class="form-control" id="modalSignupEmail1" placeholder="johndoe@creativelayers.com" name="email">
+                    </div>
+
+                    <div class="form-group mb-5">
+                        <label for="modalSignupUsername1">
+                            رقم الهاتف (WhatsApp)
+                        </label>
+                        <input type="phone-number" class="form-control" id="modalSignupUsername1" placeholder="WhatsApp phone number" name="phone">
+                    </div>
+
+                    <!-- Password 
+                    <div class="form-group mb-5">
+                        <label for="modalSignupPassword3">
+                            Password
+                        </label>
+                        <input type="password" class="form-control" id="modalSignupPassword3" placeholder="**********" name="password">
+                    </div>
+                    __>
+                    <!-- Submit -->
+                    <button class="btn btn-block btn-primary" type="submit">
+                        احجز
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+{% else %}
+<!-- PAGE TITLE
+    ================================================== -->
+    <header class="py-8 py-md-11" style="background-image: none;">
+        <div class="container text-center py-xl-2">
+            <h1 class="display-4 fw-semi-bold mb-0">Book your course</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-scroll justify-content-center">
+                    <li class="breadcrumb-item">
+                        <a class="text-gray-800" href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item text-gray-800 active" aria-current="page">
+                        Booking
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <!-- Img -->
+        <img class="d-none img-fluid" src="...html" alt="...">
+    </header>
+
+
+    <!-- REGISTER
+    ================================================== -->
+    <div class="container mb-11">
+        <div class="row gx-0">
+            <div class="col-md-7 col-xl-4 mx-auto">
+                <!-- Register -->
+                <h3 class="mb-6">Book and Start Learning!</h3>
+                {% include 'components/msg.html'%}
+                <!-- Form Register -->
+                <form class="mb-5" method="post" action="{% url 'register' %}">
+                    {% csrf_token %}
+
+                    <!-- Username -->
+                    <div class="form-group mb-5">
+                        <label for="modalSignupUsername1">
+                            Full name 
+                        </label>
+                        <input type="text" class="form-control" id="modalSignupUsername1" placeholder="mohamed ahmed" name="username">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group mb-5">
+                        <label for="modalSignupEmail1">
+                            Email
+                        </label>
+                        <input type="email" class="form-control" id="modalSignupEmail1" placeholder="johndoe@creativelayers.com" name="email">
+                    </div>
+
+                    <div class="form-group mb-5">
+                        <label for="modalSignupUsername1">
+                            phone number (WhatsApp)
+                        </label>
+                        <input type="phone-number" class="form-control" id="modalSignupUsername1" placeholder="WhatsApp phone number" name="phone">
+                    </div>
+
+                    <!-- Password 
+                    <div class="form-group mb-5">
+                        <label for="modalSignupPassword3">
+                            Password
+                        </label>
+                        <input type="password" class="form-control" id="modalSignupPassword3" placeholder="**********" name="password">
+                    </div>
+                    __>
+                    <!-- Submit -->
+                    <button class="btn btn-block btn-primary" type="submit">
+                        Book
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+{% endblock %}

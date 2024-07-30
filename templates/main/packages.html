@@ -1,0 +1,234 @@
+{% extends 'base.html' %}
+{% block title %}Packages{% endblock %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+{%load course_tags%}
+
+{% if LANGUAGE_CODE == 'ar'%}
+<!-- PAGE TITLE
+    ================================================== -->
+<header class="py-8 py-md-8" style="background-image: none;">
+    <div class="container text-center py-xl-2">
+        <h1 class="display-4 fw-semi-bold mb-0">الباقات</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-scroll justify-content-center">
+                <li class="breadcrumb-item">
+                    <a class="text-gray-800" href="#">
+                        الرئيسية
+                    </a>
+                </li>
+                <li class="breadcrumb-item text-gray-800 active" aria-current="page">
+                    الباقات
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Img -->
+    <img class="d-none img-fluid" src="...html" alt="...">
+</header>
+{% else %}
+<header class="py-2 py-md-8" style="background-image: none;">
+    <div class="container text-center py-xl-2">
+        <h1 class="display-2 fw-semi-bold mb-0">Packages</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-scroll justify-content-center">
+                <li class="breadcrumb-item">
+                    <a class="text-gray-800" href="#">
+                        Home
+                    </a>
+                </li>
+                <li class="breadcrumb-item text-gray-800 active" aria-current="page">
+                    Packages
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Img -->
+    <img class="d-none img-fluid" src="...html" alt="...">
+</header>
+{% endif %}
+<!-- COURSE LIST V2
+================================================== -->
+{% if LANGUAGE_CODE == 'ar'%}
+<section class="packages">
+    <div class="package">
+        <h2>الباقة الأساسية</h2>
+        <ul>
+            <li>.تقسيم الباقة حسب المناسب</li>
+            <li>.مواعيد صباحية ومسائية</li>
+            <li>.الباقه الأساسية لطالب واحد</li>
+        </ul>
+        <a href="https://wa.me/+971582733600"><button class="start">ابدأ الان</button></a>
+    </div>
+    <div class="package">
+        <h2>الباقة المتقدمة</h2>
+        <ul>
+            <li>.تقسيم الباقة حسب المناسب</li>
+            <li>.مواعيد صباحية ومسائية</li>
+            <li>.الباقه الحصرية لحد اقصي طالبين او اقل</li>
+        </ul>
+        <a href="https://wa.me/+971582733600"><button class="start">ابدأ الان</button></a>
+    </div>
+    <div class="package">
+        <h2>الباقة الشاملة</h2>
+        <ul>
+            <li>.تقسيم الباقة حسب المناسب</li>
+            <li>.مواعيد صباحية ومسائية</li>
+            <li>.الباقه الحصرية لحد اقصي ٣ طلاب او اقل</li>
+        </ul>
+        <a href="https://wa.me/+971582733600"><button class="start">ابدأ الان</button></a>
+    </div>
+    <div class="package">
+        <h2>الباقة الحصرية</h2>
+        <ul>
+            <li>.تقسيم الباقة حسب المناسب</li>
+            <li>.مواعيد صباحية ومسائية</li>
+            <li>.الباقه الحصرية لحد اقصي ٤ طلاب او اقل</li>
+        </ul>
+        <a href="https://wa.me/+971582733600"><button class="start">ابدأ الان</button></a>
+    </div>
+    <div class="package">
+        <h2>الباقة الحصرية بلس</h2>
+        <ul>
+            <li>.تقسيم الباقة حسب المناسب</li>
+            <li>.مواعيد صباحية ومسائية</li>
+            <li>.الباقه الحصرية لحد اقصي ٤ طلاب او اقل</li>
+        </ul>
+        <a href="https://wa.me/+971582733600"><button class="start">ابدأ الان</button></a>
+    </div>
+    <div class="package">
+        <h2>الباقة المكتمله</h2>
+        <ul>
+            <li>.تقسيم الباقة حسب المناسب</li>
+            <li>.مواعيد صباحية ومسائية</li>
+            <li>.الباقه الحصرية بلس لعدد لا نهائي من الطلاب</li>
+        </ul>
+        <a href="https://wa.me/+971582733600"><button class="start">ابدأ الان</button></a>
+    </div>
+    
+</section>
+{% else %}
+<section class="packages">
+    <div class="package">
+        <h2>Basic Package</h2>
+        <ul>
+            <li>based on what is most suitable or appropriate.</li>
+            <li>schedules could be in the morning and evening</li>
+            <li>the package is for 1 student</li>
+        </ul>
+        <a href="https://wa.me/+971582733600"><button class="start">Get Started</button></a>
+    </div>
+    <div class="package">
+        <h2>Standard Package</h2>
+        <ul>
+            <li>based on what is most suitable or appropriate.</li>
+            <li>schedules could be in the morning and evening</li>
+            <li>the package is for 2 students or less</li>
+        </ul>
+        <a href="https://wa.me/+971582733600"><button class="start">Get Started</button></a>
+    </div>
+    <div class="package">
+        <h2>Ultimate Package</h2>
+        <ul>
+            <li>based on what is most suitable or appropriate.</li>
+            <li>schedules could be in the morning and evening</li>
+            <li>the package is for 3 students or less</li>
+        </ul>
+        <a href="https://wa.me/+971582733600"><button class="start">Get Started</button></a>
+    </div>
+    <div class="package">
+        <h2>Premium Package</h2>
+        <ul>
+            <li>based on what is most suitable or appropriate.</li>
+            <li>schedules could be in the morning and evening</li>
+            <li>the package is for 4 students or less</li>
+        </ul>
+        <a href="https://wa.me/+971582733600"><button class="start">Get Started</button></a>
+    </div>
+    <div class="package">
+        <h2>Premium+ Package</h2>
+        <ul>
+            <li>based on what is most suitable or appropriate.</li>
+            <li>schedules could be in the morning and evening</li>
+            <li>the package is for 5 students or less</li>
+        </ul>
+        <a href="https://wa.me/+971582733600"><button class="start">Get Started</button></a>
+    </div>
+    <div class="package">
+        <h2>Exclusive Package</h2>
+        <ul>
+            <li>based on what is most suitable or appropriate.</li>
+            <li>schedules could be in the morning and evening</li>
+            <li>the package is for unlimited students</li>
+        </ul>
+        <a href="https://wa.me/+971582733600"><button class="start">Get Started</button></a>
+    </div>
+    
+</section>
+{% endif %}
+<style>
+    header h1 {
+        margin: 0;
+    }
+    
+    main {
+        padding: 2em;
+    }
+    
+    .packages {
+        display: flex;
+        justify-content: space-around;
+        padding: 90px;
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+    
+    .package {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5em;
+        text-align: center;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .package h2 {
+        margin-top: 0;
+    }
+    
+    .price {
+        font-size: 1.5em;
+        color: #333;
+        margin: 0.5em 0;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    ul li {
+        margin: 0.7em 0;
+        bu
+    }
+    
+    .start {
+        background: #333;
+        color: #fff;
+        border: none;
+        padding: 0.75em 1.5em;
+        margin-top:1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+    
+    .start:hover {
+        background: #555;
+    }
+</style>
+{% endblock %}
